@@ -12,12 +12,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import appFirebase from "./Screens/credenciales";
 import "react-native-gesture-handler";
-import Login from "./Screens/Login";
-import TagDetail from "./Screens/TagDetail";
-import Home from "./Screens/Home";
+import Login from "./navigation/Login";
+import Home from "./navigation/Home";
 import ProductDetail from "./Screens/ProductDetail";
-import ResetPassword from "./Screens/ResetPassword";
-import Register from "./Screens/Register";
+import ResetPassword from "./navigation/ResetPassword";
+import Register from "./navigation/Register";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./Screens/i18n";
 import { productStyle } from "./styles/productStyle";
@@ -80,13 +79,6 @@ export default function App() {
             }}
           />
 
-          <Stack.Screen
-            name="TagDetail"
-            component={TagDetail}
-            options={{
-              title: i18n.t("TagDetail"),
-            }}
-          />
           <Stack.Screen
             name="ProductDetail"
             component={ProductDetail}
